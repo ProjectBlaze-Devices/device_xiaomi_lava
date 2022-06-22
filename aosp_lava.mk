@@ -41,6 +41,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 PRODUCT_DEVICE := lava
 PRODUCT_NAME := aosp_lava
 PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi 9
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
