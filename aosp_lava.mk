@@ -28,7 +28,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_USES_AOSP_RECOVERY := true
+TARGET_SUPPORTS_BLUR := true
+FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := false
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 #
