@@ -27,11 +27,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_BLUR := true
 FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := false
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# Blaze Stuff
+BLAZE_BUILD_TYPE := UNOFFICIAL
+BLAZE_MAINTAINER := orkunergun
+IS_PHONE := true
+
+# GApps
+WITH_GAPPS := true
 
 #
 # All components inherited here go to system_ext image
@@ -41,7 +49,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lava
-PRODUCT_NAME := aosp_lava
+PRODUCT_NAME := blaze_lava
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 9
 PRODUCT_MANUFACTURER := xiaomi
