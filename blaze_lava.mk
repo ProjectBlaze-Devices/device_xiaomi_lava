@@ -38,9 +38,6 @@ BLAZE_BUILD_TYPE := OFFICIAL
 BLAZE_MAINTAINER := orkunergun
 IS_PHONE := true
 
-# GApps
-WITH_GAPPS := true
-
 #
 # All components inherited here go to system_ext image
 #
